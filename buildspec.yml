@@ -19,9 +19,9 @@ phases:
 
   post_build:
     commands:
-      - echo === WE ARE ENTERING THE PREBUILD PHASE ===
+      - echo === WE ARE ENTERING THE POSTBUILD PHASE ===
       - echo Build phase was completed on 'date'
 
-  artifacts:
+artifacts:
     files:
       - "**/*" # Grab everything in build phases and zip
