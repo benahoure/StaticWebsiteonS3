@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9 # Install Python version 3.9
+
+  pre_build:
+    commands:
+      - echo === WE ARE ENTERING THE PREBUILD PHASE ===
+      - echo "=== Verifying Python version installed ==="
+      - python --version
+      - ls -l
+
+  build:
+    commands:
+      - echo "Displaying name:"
+      - echo "Build by Ben Ahoure in The DevOps Team" # Replace with your actual name
+
+  post_build:
+    commands:
+      - echo === WE ARE ENTERING THE PREBUILD PHASE ===
+      - echo Build phase was completed on 'date'
+
+  artifacts:
+    files:
+      - "**/*" # Grab everything in build phases and zip
